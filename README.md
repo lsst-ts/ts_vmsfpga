@@ -30,12 +30,17 @@ from internal FIFOs:
 
 | Command | Description                                          |
 | ------- | ---------------------------------------------------- |
-| 29      | Turn on/off (Start/Stop) Accelerometers.             |
+| 29      | Request accelerometer data.                          |
 
 This will trigger operation writing:
 
 - 50 timestamps on U64ResponseFIFO
 - 50 * 3 * [number of accelerometers] double values (raw accelerometer values) on SQLResponseFIFO.
+
+## cRIO modules settings
+
+NI-9234 and NI-9232 should be configured for in calibrated mode, using mostly
+some synchronized clocks from a single unit on cRIO.
 
 ## Timestamp synchronization
 
