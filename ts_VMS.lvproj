@@ -665,6 +665,7 @@
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					</Item>
+					<Item Name="FPGAHealthAndStatus.lvlib" Type="Library" URL="../Common_FPGA_HealthAndStatus/FPGAHealthAndStatus.lvlib"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="VMS_3_Controller" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
@@ -1655,6 +1656,7 @@ AddOutputFilter chunkFilter
 						<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
 					</Item>
+					<Item Name="FPGAHealthAndStatus.lvlib" Type="Library" URL="../Common_FPGA_HealthAndStatus/FPGAHealthAndStatus.lvlib"/>
 				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="VMS_6_Controller" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
