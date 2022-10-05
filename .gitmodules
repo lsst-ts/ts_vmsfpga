@@ -1,3 +1,0 @@
-[submodule "Common_FPGA_Timestamp"]
-	path = Common_FPGA_Timestamp
-	url = https://github.com/lsst-ts/common_fpga_timestamp.git

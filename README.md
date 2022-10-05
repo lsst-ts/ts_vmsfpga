@@ -134,9 +134,9 @@ Responder Waiting state.
 ### Responder Waiting state
 
 In this state, responder is ready to receive controller clocks. Once base clock
-zero trigger (line 1) is and base clock offset from controller with "Controller
-Running" state transitions are received, responder switch to state Responder
-Synced.
+zero trigger (line 1) is received and base clock offset from controller with
+"Controller Running" state transitions are received, responder switch to state
+Responder Synced.
 
 If responder cannot switch to Responder Synced within some timeout, it fails to
 "Synchronization Failed" state.
