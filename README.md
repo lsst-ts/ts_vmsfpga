@@ -2,7 +2,7 @@
 
 This is code for FPGAs loaded into cRIO FPGAs. Handles low-level tasks of
 recording data into FPGA FIFOs. [TS VMS](https://github.com/lsst-ts/ts_vms) is
-a CsC, asking FPGA for data and making those available as SAL/DDS messages.
+a CSC, asking FPGA for data and making those available as SAL/DDS messages.
 
 The code provides various build target to build FPGA for different cRIOs
 collecting FPGA data.
@@ -53,7 +53,7 @@ from internal FIFOs:
 
 The process requesting data shall regularly call command 2 to synchronize
 clocks as it reads data. Those are internal FPGA clocks, doesn't affect readout
-frequency - it is use only for timestamping samples.
+frequency - it is used only for timestamping samples.
 
 First data might took longer to arrive - expecting 500ms timeout is reasonable.
 Next data shall come in 50ms (50 samples at 1kHz), 70ms is reasonable. Data are
@@ -82,15 +82,15 @@ easily correlated among different sources.
 
 cRIOs are equipped with NI-9469 synchronization module. One of the VMS cRIOs
 is designated as source of the synchronization signals, generating triggers at
-regular intervals. This source cRIO is refered to as controller in the
+regular intervals. This source cRIO is referred to as controller in the
 following paragraphs. The other cRIOs are designated as responders. Responders
 receive clock triggers from the controller. NI-9469 provides 4 trigger lines,
 which are used as following:
 
 | Line | Used for                                                                                                                       |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 0    | Triggered for controller-responder synchronization. Data shall be avereged out, base clock increased when this trigger occurs. |
-| 1    | Send from controller to responder to zero base clocks, start accelometer collecting.                                           |
+| 0    | Triggered for controller-responder synchronization. Data shall be averaged out, base clock increased when this trigger occurs. |
+| 1    | Send from controller to responder to zero base clocks, start accelerometer collecting.                                           |
 | 2    | Not used.                                                                                                                      |
 | 3    | Not used.                                                                                                                      |
 
@@ -122,10 +122,10 @@ flowchart TD
 
 ### Initialising state
 
-When CSC is started, it signals in its state it is initialising. In this state,
-controller sets base clocks to 0 and doesn't send time synchronization
-triggers. A thread to receive timeSynchronization events is started in
-controller before transitioning to Controller Ready state.
+CSC is started in initialising state. In this state, controller sets base
+clocks to 0 and doesn't send time synchronization triggers. A thread to receive
+timeSynchronization events is started in controller before transitioning to
+Controller Ready state.
 
 Receivers sets base clock to 0. A thread to receive timeSynchronization events
 from controller (CSC with index 1) is started before transitioning into
@@ -171,7 +171,7 @@ into Synchronization Failed state.
 
 Controller also fails into Synchronization Failed state if any responder which
 entered "Responder Waiting" state doesn't progress into "Responder Running", or
-if a CSC enters "Synchronization Failed" or "Initialising" states.
+if a CSC enters "Synchronization Failed" or "Initializing" states.
 
 ### Synchronization Failed state
 
@@ -195,11 +195,11 @@ synchronization.
 
 Running statistics (mean, average,  minimal, maximal values) is calculated with
 every new sample, acquired from AD converter. Individual readout values are
-also stored in a memory, allowing calculation of mean, if needed.
+also stored in the memory, allowing calculation of mean, if needed.
 
 ## CameraRotator FPGA
 
-As Camera Rotator uses NI-9076 cRIO VxWorks RTOS, C++ based Linux CsC cannot be
+As Camera Rotator uses NI-9076 cRIO VxWorks RTOS, C++ based Linux CSC cannot be
 run directly on CPU attached to FPGA. FPGA can be commanded through Ethernet,
 with RIO name specified as URL (rio://<ip-address>/RIO). Please see [TS VMS
 configuration](https://github.com/lsst-ts/ts_vms/master/SettingFiles/CameraRotator/VMSApplicationSettings.yaml)
