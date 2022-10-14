@@ -609,7 +609,7 @@ AddOutputFilter chunkFilter
 						<Property Name="Comp.CustomXilinxParameters" Type="Str"></Property>
 						<Property Name="Comp.MaxFanout" Type="Int">-1</Property>
 						<Property Name="Comp.RandomSeed" Type="Bool">false</Property>
-						<Property Name="Comp.Version.Build" Type="Int">20</Property>
+						<Property Name="Comp.Version.Build" Type="Int">29</Property>
 						<Property Name="Comp.Version.Fix" Type="Int">0</Property>
 						<Property Name="Comp.Version.Major" Type="Int">1</Property>
 						<Property Name="Comp.Version.Minor" Type="Int">0</Property>
@@ -676,6 +676,42 @@ AddOutputFilter chunkFilter
 						<Property Name="SupportResourceEstimation" Type="Bool">false</Property>
 						<Property Name="TargetName" Type="Str">VMS_3 FPGA</Property>
 						<Property Name="TopLevelVI" Type="Ref">/VMS_3/Chassis/VMS_3 FPGA/VMS_3_Responder.vi</Property>
+					</Item>
+					<Item Name="AccelerometerSample3" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
+						<Property Name="AllowEnableRemoval" Type="Bool">false</Property>
+						<Property Name="BuildSpecDecription" Type="Str"></Property>
+						<Property Name="BuildSpecName" Type="Str">AccelerometerSample3</Property>
+						<Property Name="Comp.BitfileName" Type="Str">tsVMS_VMS3FPGA_AccelerometerSam_Ydxes3ZMm2U.lvbitx</Property>
+						<Property Name="Comp.CustomXilinxParameters" Type="Str"></Property>
+						<Property Name="Comp.MaxFanout" Type="Int">-1</Property>
+						<Property Name="Comp.RandomSeed" Type="Bool">false</Property>
+						<Property Name="Comp.Version.Build" Type="Int">0</Property>
+						<Property Name="Comp.Version.Fix" Type="Int">0</Property>
+						<Property Name="Comp.Version.Major" Type="Int">1</Property>
+						<Property Name="Comp.Version.Minor" Type="Int">0</Property>
+						<Property Name="Comp.VersionAutoIncrement" Type="Bool">false</Property>
+						<Property Name="Comp.Vivado.EnableMultiThreading" Type="Bool">true</Property>
+						<Property Name="Comp.Vivado.OptDirective" Type="Str"></Property>
+						<Property Name="Comp.Vivado.PhysOptDirective" Type="Str"></Property>
+						<Property Name="Comp.Vivado.PlaceDirective" Type="Str"></Property>
+						<Property Name="Comp.Vivado.RouteDirective" Type="Str"></Property>
+						<Property Name="Comp.Vivado.RunPowerOpt" Type="Bool">false</Property>
+						<Property Name="Comp.Vivado.Strategy" Type="Str">Default</Property>
+						<Property Name="Comp.Xilinx.DesignStrategy" Type="Str">balanced</Property>
+						<Property Name="Comp.Xilinx.MapEffort" Type="Str">default(noTiming)</Property>
+						<Property Name="Comp.Xilinx.ParEffort" Type="Str">standard</Property>
+						<Property Name="Comp.Xilinx.SynthEffort" Type="Str">normal</Property>
+						<Property Name="Comp.Xilinx.SynthGoal" Type="Str">speed</Property>
+						<Property Name="Comp.Xilinx.UseRecommended" Type="Bool">true</Property>
+						<Property Name="DefaultBuildSpec" Type="Bool">true</Property>
+						<Property Name="DestinationDirectory" Type="Path">FPGA Bitfiles</Property>
+						<Property Name="ProjectPath" Type="Path">/C/Users/pkubanek/ts_vmsfpga/ts_VMS.lvproj</Property>
+						<Property Name="RelativePath" Type="Bool">true</Property>
+						<Property Name="RunWhenLoaded" Type="Bool">false</Property>
+						<Property Name="SupportDownload" Type="Bool">true</Property>
+						<Property Name="SupportResourceEstimation" Type="Bool">false</Property>
+						<Property Name="TargetName" Type="Str">VMS_3 FPGA</Property>
+						<Property Name="TopLevelVI" Type="Ref">/VMS_3/Chassis/VMS_3 FPGA/Support/AccelerometerSample3.vi</Property>
 					</Item>
 				</Item>
 			</Item>
